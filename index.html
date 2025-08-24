@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>M . J . E SERVIÇOS</title>
+</head>
+<body>
+    <div class="particulas"></div>
+
+
+    <nav class="navegacao">
+        <ul class="menu">
+        <li>
+            <a href="#inicio" class="menu-link">Inicio</a>
+        </li>
+        <li>
+            <a href="#sobre" class="menu-link">Sobre</a>
+        </li>
+        <li>
+            <a href="#projetos" class="menu-link">Serviços</a>
+        </li>
+        <li>
+            <a href="#contatos" class="menu-link">Contato</a>
+        </li>
+       </ul>
+    </nav>
+    <main id="inicio" class="cabecalho">
+        
+         <img src="Imagem do WhatsApp de 2025-07-18 à(s) 12.03.05_35b813ac.jpg" alta="foto de Rauã Nikolas" class="foto-perfil">
+
+         <h1 class="nome">M.J.E SERVIÇOS </h1> 
+         <p class="cabecalho-sub-titulo"></p>  
+        
+         </main>
+         <section id="sobre" class="sobre">
+           <h2 class="sobre-titulo">QUEM SOMOS </h2>
+           <div class="sobre-caixa">
+            <p class="sobre-paragrafo"> SOMOS ESPECIALISTAS EM CONSTRUÇÃO
+CIVIL, OFERECEMOS SERVIÇOS DE REFORMA E
+PINTURA CIVIL EM GERAL EM RESIDÊNCIAS E
+EDIFÍCIOS, MANUTENÇÃO E INSTALAÇÃO EM
+SISTEMAS DE AR CONDICIONADO,
+VENTILAÇÃO, REFRIGERAÇÃO E FABRICAÇÃO
+E REFORMA DE ESTRUTURAS METÁLICAS. </p>
+           </div> 
+         </section>
+         <section id="projetos" class="projetos">
+            
+            <div class="projetos-caixa">
+                <div class="projetos-card">
+                    <img src="./images (1).jpeg" alt="projetos 1" class="projetos-imagem">
+                    <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">NOSSA MISSÃO</h3>
+                    <p class="paragrafo-projetos">- COMPROMETEMO-NOS A
+FORNECER SERVIÇOS DE QUALIDADE,
+GARANTINDO A SATISFAÇÃO DE NOSSOS
+CLIENTES COM SOLUÇÕES EFICIENTES E
+PROFISSIONAIS.
+</p>
+                </div>
+
+                </div>
+                 <div class="projetos-card">
+                    <img src="./images.jpeg" alt="projetos 1" class="projetos-imagem">
+                     <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">VISÃO</h3>
+                    <p class="paragrafo-projetos">- SER UMA EMPRESA DE REFERÊNCIA
+NOS MERCADOS EM QUE ATUA, POR MEIO DA
+QUALIDADE DE SEUS PRODUTOS, SERVIÇOS E
+RELACIONAMENTO.</p>
+                </div>
+                </div>
+                <div class="projetos-card">
+                    <img src="./images (2).jpeg" alt="projetos 1" class="projetos-imagem">
+                     <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">VALORES</h3>
+                    <p class="paragrafo-projetos">- COMPROMETIMENTO,
+RESPONSABILIDADE, TRANSPARÊNCIA,
+VALORIZAÇÃO HUMANA, RESPEITO AO MEIO
+AMBIENTE E MELHORIA CONTÍNUA</p>
+                </div>
+                </div>
+               
+
+            </div>
+             
+         </section>
+         <section id="contatos" class="contatos">
+  <h2 class="contatos-titulo">Entre em Contato</h2>
+  <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+    <div class="grupo-form">
+      <input placeholder="Nome" class="text-form" id="nome">
+    </div>
+    <div class="grupo-form">
+      <textarea class="text-form" placeholder="Digite sua mensagem" rows="5" id="mensagem"></textarea>
+    </div>
+    <button type="submit" class="botao-form">Enviar WhatsApp</button>
+  </form>
+</section>
+<script>
+  function enviarwhats(event) {
+    event.preventDefault();
+    var nome = document.getElementById('nome').value.trim();
+    var mensagem = document.getElementById('mensagem').value.trim();
+    var numero = "85 987989870"; // Coloque aqui o número de destino
+
+    if (!nome || !mensagem) {
+      alert("Por favor, preencha seu nome e mensagem.");
+      return;
+    }
+
+    var texto = `Olá, meu nome é ${nome}. ${mensagem}`;
+    var url = `https://web.whatsapp.com/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(url, '_blank');
+  }
+</script>
+         <footer>
+            <div class="container">
+                <p>&copy;2025 METARLUGICAS M.J.E. SERVIÇOS </p>
+            </div>
+        </footer>
+         
+
+        
+    
+</body>
+</html>
